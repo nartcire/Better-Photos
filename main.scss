@@ -96,6 +96,15 @@ a {
   display: grid;
   grid-template-columns: 355px 1fr;
   grid-template-rows: 65px 724px 1fr;
+
+  @media (max-width: 1300px) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media (max-width: 355px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 // STYLES
@@ -114,6 +123,10 @@ a {
 
 .search {
   position: relative;
+
+  @media (max-width: 815px) {
+    display: none;
+  }
 
   &__input {
     background-color: $color-grey-light;
@@ -189,6 +202,10 @@ a {
 
   grid-column: 1 / 2;
   grid-row: 2 / 4;
+
+  @media (max-width: 580px) {
+    grid-column: 1 / 3;
+  }
 }
 
 .intro {
@@ -208,6 +225,10 @@ a {
   text-transform: uppercase;
   font-size: 34px;
   line-height: 1;
+
+  @media (max-width: 355px) {
+    font-size: 31px;
+  }
 }
 
 .social {
@@ -357,6 +378,20 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 272px 60px 90px 64px 30px 208px;
 
+  @media (max-width: 1130px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 815px) {
+    grid-row: 2 / 4;
+    grid-template-rows: 272px 60px 90px 64px 30px 208px 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 580px) {
+    display: none;
+  }
+
   &__img-wrapper {
     position: relative;
 
@@ -370,12 +405,20 @@ a {
       grid-column: 2 / 3;
       grid-row: 1 / 4;
       animation: fade-in 1s 0.2s backwards;
+
+      @media (max-width: 815px) {
+        display: none;
+      }
     }
 
     &:nth-child(3) {
       grid-column: 3 / 4;
       grid-row: 1 / 2;
       animation: fade-in 1s 0.3s backwards;
+
+      @media (max-width: 1130px) {
+        display: none;
+      }
     }
 
     &:nth-child(4) {
@@ -388,12 +431,20 @@ a {
       grid-column: 2 / 3;
       grid-row: 4 / -1;
       animation: fade-in 1s 0.5s backwards;
+
+      @media (max-width: 815px) {
+        display: none;
+      }
     }
 
     &:nth-child(6) {
       grid-column: 3 / 4;
       grid-row: 2 / 5;
       animation: fade-in 1s 0.6s backwards;
+
+      @media (max-width: 1130px) {
+        display: none;
+      }
     }
 
     &:nth-child(7) {
@@ -406,6 +457,10 @@ a {
       grid-column: 3 / 4;
       grid-row: 5 / -1;
       animation: fade-in 1s 0.8s backwards;
+
+      @media (max-width: 1130px) {
+        display: none;
+      }
     }
   }
 
@@ -464,11 +519,21 @@ a {
   grid-row: 3 / 4;
   display: flex;
   align-items: center;
+
+  @media (max-width: 815px) {
+    display: none;
+  }
 }
 
 .step {
   text-align: center;
   padding: 0 20px;
+
+  &:nth-child(3) {
+    @media (max-width: 1130px) {
+      display: none;
+    }
+  }
 
   &__icon {
     font-size: 20px;
